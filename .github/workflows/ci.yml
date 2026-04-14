@@ -14,3 +14,11 @@ jobs:
 
     - name: Run test step
       run: echo "Your first CI pipeline is working!"
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform Validate
+      run: terraform validate
